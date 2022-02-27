@@ -1,0 +1,38 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "my-first-app/",
+			"isBackground": true,
+			"problemMatcher": {
+				"owner": "typescript",
+				"pattern": "$tsc",
+				"background": {
+				  "activeOnStart": true,
+				  "beginsPattern": {
+					"regexp": "(.*?)"
+				  },
+				  "endsPattern": {
+					"regexp": "bundle generation complete"
+				  }
+				}
+			  },
+			"label": "npm: start - my-first-app",
+			"detail": "ng serve",
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "my-first-app/",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: build - my-first-app",
+			"detail": "ng build"
+		}
+	]
+}
